@@ -1,0 +1,119 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#1a2848"/>
+    <stop offset="60%" stop-color="#253260"/>
+    <stop offset="100%" stop-color="#1e2a50"/>
+  </linearGradient>
+  <linearGradient id="horizon" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#2a3870" stop-opacity="0.6"/>
+    <stop offset="100%" stop-color="#2a3870" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="ground" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0%" stop-color="#18202c"/>
+    <stop offset="100%" stop-color="#0e141e"/>
+  </linearGradient>
+  <radialGradient id="moon" cx="82%" cy="12%" r="8%">
+    <stop offset="0%" stop-color="#d0d8f0" stop-opacity="0.30"/>
+    <stop offset="100%" stop-color="#d0d8f0" stop-opacity="0"/>
+  </radialGradient>
+</defs>
+<rect width="1600" height="900" fill="url(#sky)"/>
+<ellipse cx="1600" cy="900" rx="1200" ry="400" fill="url(#horizon)"/>
+<rect width="1600" height="900" fill="url(#moon)"/>
+<rect y="600" width="1600" height="300" fill="url(#ground)"/>
+<line x1="0" y1="600" x2="1600" y2="600" stroke="#3a4a70" stroke-width="1" opacity="0.5"/>
+
+<!-- Low buildings far left -->
+<rect x="0" y="520" width="120" height="80" fill="#3a4a68"/>
+<rect x="122" y="495" width="90" height="105" fill="#404f72"/>
+<rect x="214" y="510" width="70" height="90" fill="#3a4868"/>
+
+<!-- Left mid-rise cluster -->
+<rect x="300" y="450" width="55" height="150" fill="#485a7a"/>
+<rect x="357" y="420" width="45" height="180" fill="#505e80" />
+<rect x="404" y="460" width="60" height="140" fill="#485878"/>
+<rect x="460" y="435" width="35" height="165" fill="#4a5c7a"/>
+
+<!-- Tall tower left-center (like a Frankfurt high-rise) -->
+<rect x="510" y="250" width="65" height="350" fill="#606a8a"/>
+<rect x="510" y="250" width="65" height="6" fill="#707a98"/>
+<line x1="542" y1="250" x2="542" y2="130" stroke="#707a98" stroke-width="3" opacity="0.8"/>
+<!-- Antenna -->
+<line x1="542" y1="130" x2="542" y2="90" stroke="#808898" stroke-width="1.5" opacity="0.7"/>
+<rect x="520" y="260" width="8" height="8" fill="#d0c060" opacity="0.55"/>
+<rect x="533" y="260" width="8" height="8" fill="#d0c060" opacity="0.40"/>
+<rect x="547" y="260" width="8" height="8" fill="#d0c060" opacity="0.65"/>
+<rect x="560" y="260" width="8" height="8" fill="#d0c060" opacity="0.35"/>
+<rect x="520" y="278" width="8" height="8" fill="#d0c060" opacity="0.50"/>
+<rect x="533" y="278" width="8" height="8" fill="#d0c060" opacity="0.70"/>
+<rect x="547" y="278" width="8" height="8" fill="#d0c060" opacity="0.30"/>
+<rect x="560" y="278" width="8" height="8" fill="#d0c060" opacity="0.55"/>
+<rect x="520" y="296" width="8" height="8" fill="#d0c060" opacity="0.60"/>
+<rect x="533" y="296" width="8" height="8" fill="#d0c060" opacity="0.35"/>
+<rect x="547" y="296" width="8" height="8" fill="#d0c060" opacity="0.50"/>
+<rect x="520" y="314" width="8" height="8" fill="#d0c060" opacity="0.40"/>
+<rect x="547" y="314" width="8" height="8" fill="#d0c060" opacity="0.65"/>
+<rect x="560" y="314" width="8" height="8" fill="#d0c060" opacity="0.30"/>
+
+<!-- Mid cluster -->
+<rect x="590" y="380" width="55" height="220" fill="#545e7e"/>
+<rect x="647" y="340" width="70" height="260" fill="#5a6484"/>
+<rect x="719" y="400" width="50" height="200" fill="#505a7c"/>
+
+<!-- MAIN TOWER (center-right — like Commerzbank, triangular top) -->
+<polygon points="800,150 840,150 850,200" fill="#6a7090"/>
+<rect x="800" y="200" width="80" height="400" fill="#687090"/>
+<rect x="800" y="200" width="80" height="6" fill="#7880a0"/>
+<line x1="840" y1="150" x2="840" y2="80" stroke="#7880a0" stroke-width="2" opacity="0.8"/>
+<line x1="840" y1="80" x2="840" y2="50" stroke="#9098b0" stroke-width="1.2" opacity="0.7"/>
+<rect x="808" y="215" width="9" height="7" fill="#d0c060" opacity="0.55"/>
+<rect x="822" y="215" width="9" height="7" fill="#d0c060" opacity="0.70"/>
+<rect x="836" y="215" width="9" height="7" fill="#d0c060" opacity="0.40"/>
+<rect x="851" y="215" width="9" height="7" fill="#d0c060" opacity="0.60"/>
+<rect x="863" y="215" width="9" height="7" fill="#d0c060" opacity="0.35"/>
+<rect x="808" y="233" width="9" height="7" fill="#d0c060" opacity="0.65"/>
+<rect x="822" y="233" width="9" height="7" fill="#d0c060" opacity="0.35"/>
+<rect x="836" y="233" width="9" height="7" fill="#d0c060" opacity="0.55"/>
+<rect x="851" y="233" width="9" height="7" fill="#d0c060" opacity="0.80"/>
+<rect x="863" y="233" width="9" height="7" fill="#d0c060" opacity="0.40"/>
+<rect x="808" y="251" width="9" height="7" fill="#d0c060" opacity="0.40"/>
+<rect x="822" y="251" width="9" height="7" fill="#d0c060" opacity="0.60"/>
+<rect x="851" y="251" width="9" height="7" fill="#d0c060" opacity="0.50"/>
+<rect x="863" y="251" width="9" height="7" fill="#d0c060" opacity="0.70"/>
+
+<!-- Tower right-center -->
+<rect x="900" y="300" width="60" height="300" fill="#5c6882"/>
+<rect x="900" y="300" width="60" height="5" fill="#6a7890"/>
+<line x1="930" y1="300" x2="930" y2="230" stroke="#7888a0" stroke-width="2" opacity="0.75"/>
+<rect x="908" y="315" width="8" height="7" fill="#d0c060" opacity="0.50"/>
+<rect x="921" y="315" width="8" height="7" fill="#d0c060" opacity="0.70"/>
+<rect x="934" y="315" width="8" height="7" fill="#d0c060" opacity="0.40"/>
+<rect x="947" y="315" width="8" height="7" fill="#d0c060" opacity="0.55"/>
+<rect x="908" y="332" width="8" height="7" fill="#d0c060" opacity="0.65"/>
+<rect x="921" y="332" width="8" height="7" fill="#d0c060" opacity="0.35"/>
+<rect x="934" y="332" width="8" height="7" fill="#d0c060" opacity="0.60"/>
+<rect x="947" y="332" width="8" height="7" fill="#d0c060" opacity="0.45"/>
+
+<!-- Tiered tower far right -->
+<rect x="990" y="360" width="55" height="240" fill="#505a7a"/>
+<rect x="1000" y="320" width="35" height="40" fill="#585e80"/>
+<rect x="1010" y="285" width="15" height="35" fill="#606880"/>
+<line x1="1018" y1="285" x2="1018" y2="240" stroke="#707888" stroke-width="1.5" opacity="0.7"/>
+
+<!-- Right cluster buildings -->
+<rect x="1060" y="410" width="70" height="190" fill="#4a5470"/>
+<rect x="1132" y="440" width="55" height="160" fill="#485270"/>
+<rect x="1189" y="460" width="80" height="140" fill="#404e68"/>
+
+<!-- Far right low blocks -->
+<rect x="1280" y="490" width="90" height="110" fill="#3c4865"/>
+<rect x="1372" y="510" width="70" height="90" fill="#384460"/>
+<rect x="1444" y="520" width="60" height="80" fill="#344060"/>
+<rect x="1506" y="530" width="94" height="70" fill="#303c58"/>
+
+<!-- Water reflection (very subtle) -->
+<rect y="600" width="1600" height="8" fill="#2a3860" opacity="0.40"/>
+<rect y="608" width="1600" height="4" fill="#1e2a50" opacity="0.30"/>
+<rect y="612" width="1600" height="3" fill="#18243e" opacity="0.20"/>
+</svg>

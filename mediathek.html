@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mediathek & Blog – Aktuelles zu Asbest, PCB & Schadstoffen | Alexander Kreith</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-serif-display-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="Aktuelle Artikel, Urteile und Hintergründe rund um Schadstoffgutachten: Gefahrstoffverordnung 2026, Asbest in Altbauten, PCB, KMF und Sanierung.">
+<link rel="canonical" href="https://kreith-schadstoffgutachten.de/mediathek.html">
+<style>
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dm-sans-var.woff2') format('woff2')}
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/dm-serif-display-400.woff2') format('woff2')}
+@font-face{font-family:'DM Serif Display';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/dm-serif-display-400-italic.woff2') format('woff2')}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F5F2EC;--dark:#1A1A18;--mid:#3D3D38;--muted:#8A8980;
+  --accent:#2E5C3F;--accent-h:#234a31;--accent-l:#E8F0EB;
+  --border:#D8D5CE;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);font-size:16px;line-height:1.7;overflow-x:hidden}
+
+#scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),#7dc9a0);z-index:500;width:0%;transition:width 0.08s linear;pointer-events:none}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:72px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px) saturate(1.8);-webkit-backdrop-filter:blur(20px) saturate(1.8);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--dark);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul a{font-size:0.8rem;font-weight:400;color:var(--mid);text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s}
+nav ul a:hover,nav ul a.active{color:var(--accent)}
+.nav-cta{font-size:0.8rem;font-weight:500;color:white!important;background:var(--accent);padding:0.55rem 1.2rem;border-radius:2px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.2s;cursor:pointer}
+.nav-cta:hover{background:var(--accent-h)}
+
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;outline:none;z-index:210}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--dark);border-radius:2px;transition:transform 0.35s cubic-bezier(.23,1,.32,1),opacity 0.25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(10,18,12,0.97);backdrop-filter:blur(20px);z-index:205;flex-direction:column;align-items:center;justify-content:center;opacity:0;transition:opacity 0.35s ease}
+.nav-overlay.open{display:flex;animation:overlayIn 0.35s ease forwards}
+@keyframes overlayIn{from{opacity:0;transform:scale(0.98)}to{opacity:1;transform:scale(1)}}
+.nav-overlay a{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,6vw,3rem);color:rgba(255,255,255,0.45);text-decoration:none;padding:0.6rem 2rem;letter-spacing:-0.02em;transition:color 0.2s,transform 0.2s;display:block}
+.nav-overlay a:hover{color:white;transform:translateX(6px)}
+.nav-overlay .nav-overlay-cta{margin-top:2rem;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;color:white;background:var(--accent);padding:0.9rem 2.5rem;border-radius:2px;letter-spacing:0.06em;text-transform:uppercase}
+.nav-overlay-divider{width:40px;height:1px;background:rgba(255,255,255,0.1);margin:1.5rem auto}
+
+.page-head{padding:9rem 5vw 4rem;background:var(--cream);border-bottom:1px solid var(--border)}
+.page-head-inner{max-width:1100px;margin:0 auto;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:end}
+.page-eye{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem}
+.page-title{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,5vw,4rem);line-height:1.05;letter-spacing:-0.02em;color:var(--dark);margin-bottom:1rem}
+.page-sub{font-size:1rem;color:var(--muted);font-weight:300;max-width:560px;line-height:1.8}
+.page-meta{font-size:0.75rem;color:var(--muted);letter-spacing:0.08em;text-transform:uppercase}
+
+main{padding:5rem 5vw 6rem;max-width:1100px;margin:0 auto}
+
+.filter-bar{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--border)}
+.filter-chip{font-size:0.78rem;font-weight:400;color:var(--mid);background:transparent;border:1px solid var(--border);padding:0.45rem 1rem;border-radius:999px;cursor:pointer;letter-spacing:0.03em;transition:all 0.2s;font-family:inherit}
+.filter-chip:hover{border-color:var(--accent);color:var(--accent)}
+.filter-chip.active{background:var(--accent);border-color:var(--accent);color:white}
+
+.article-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:2.5rem}
+.article-card{background:white;border:1px solid var(--border);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none;color:inherit;transition:transform 0.35s cubic-bezier(.16,1,.3,1),box-shadow 0.35s,border-color 0.2s}
+.article-card:hover{transform:translateY(-4px);box-shadow:0 18px 50px -18px rgba(0,0,0,0.18);border-color:#c4c0b6}
+.article-img{aspect-ratio:16/10;position:relative;overflow:hidden;background:var(--cream)}
+.article-img-bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:transform 0.8s cubic-bezier(.16,1,.3,1)}
+.article-card:hover .article-img-bg{transform:scale(1.05)}
+.article-img-cat{position:absolute;top:1rem;left:1rem;font-size:0.65rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:white;background:rgba(46,92,63,0.9);padding:0.3rem 0.7rem;border-radius:2px;backdrop-filter:blur(6px);z-index:2}
+.article-body{padding:1.6rem 1.7rem 1.8rem;flex:1;display:flex;flex-direction:column}
+.article-meta{font-size:0.72rem;color:var(--muted);letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.7rem;display:flex;gap:0.7rem;align-items:center}
+.article-meta-dot{width:3px;height:3px;border-radius:50%;background:var(--muted)}
+.article-title{font-family:'DM Serif Display',serif;font-size:1.3rem;line-height:1.25;letter-spacing:-0.01em;color:var(--dark);margin-bottom:0.7rem;transition:color 0.2s}
+.article-card:hover .article-title{color:var(--accent)}
+.article-excerpt{font-size:0.9rem;color:var(--mid);line-height:1.65;flex:1;margin-bottom:1rem}
+.article-cta{font-size:0.78rem;font-weight:500;color:var(--accent);letter-spacing:0.05em;text-transform:uppercase;display:inline-flex;align-items:center;gap:0.4rem;transition:gap 0.2s}
+.article-card:hover .article-cta{gap:0.7rem}
+
+.cover-asbest{background:linear-gradient(135deg,#3d4f44 0%,#1a2620 100%)}
+.cover-pcb{background:linear-gradient(135deg,#5c4a3d 0%,#2e2520 100%)}
+.cover-kmf{background:linear-gradient(135deg,#8a7a5c 0%,#3d3528 100%)}
+.cover-recht{background:linear-gradient(135deg,#2E5C3F 0%,#1d3d28 100%)}
+.cover-immo{background:linear-gradient(135deg,#4a5266 0%,#252a35 100%)}
+.cover-img-asbest{background-image:url('images/asbest-fasern.jpg');background-size:cover;background-position:center}
+.article-img-pattern{position:absolute;inset:0;opacity:0.18;background-image:radial-gradient(circle at 30% 30%,rgba(255,255,255,0.4) 1px,transparent 1.5px),radial-gradient(circle at 70% 70%,rgba(255,255,255,0.3) 1px,transparent 1.5px);background-size:30px 30px,40px 40px;pointer-events:none}
+
+.article-grid .article-card.featured{grid-column:1/-1;display:grid;grid-template-columns:1.2fr 1fr;align-items:stretch}
+.article-grid .article-card.featured .article-img{aspect-ratio:auto}
+.article-grid .article-card.featured .article-body{padding:2.5rem 2.8rem}
+.article-grid .article-card.featured .article-title{font-size:1.85rem;line-height:1.15}
+.article-grid .article-card.featured .article-excerpt{font-size:0.95rem}
+
+/* Live-News-Strip */
+.live-news{margin-top:5rem;padding-top:3rem;border-top:1px solid var(--border)}
+.live-news-head{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap;margin-bottom:2rem}
+.live-news-head h2{font-family:'DM Serif Display',serif;font-size:1.7rem;letter-spacing:-0.01em;color:var(--dark)}
+.live-news-head .live-tag{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.7rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--accent)}
+.live-news-head .live-dot{width:6px;height:6px;border-radius:50%;background:#2E5C3F;box-shadow:0 0 8px rgba(46,92,63,0.6);animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.4}}
+.live-news-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:1.2rem}
+.live-news-item{padding:1.2rem 1.4rem;background:var(--cream);border:1px solid var(--border);border-radius:4px;text-decoration:none;color:inherit;display:flex;flex-direction:column;transition:transform 0.25s,border-color 0.2s}
+.live-news-item:hover{transform:translateY(-2px);border-color:var(--accent)}
+.live-news-source{font-size:0.66rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.5rem}
+.live-news-item h4{font-family:'DM Sans',sans-serif;font-weight:500;font-size:0.92rem;line-height:1.4;color:var(--dark);margin-bottom:0.7rem;flex:1}
+.live-news-date{font-size:0.72rem;color:var(--muted)}
+.live-news-loading,.live-news-error{padding:2rem;text-align:center;color:var(--muted);font-size:0.85rem;background:var(--cream);border-radius:4px;border:1px dashed var(--border)}
+.live-news-footer{margin-top:1.2rem;font-size:0.72rem;color:var(--muted);text-align:right}
+
+.media-cta{margin-top:5rem;padding:3rem 2.5rem;background:var(--cream);border-radius:6px;text-align:center;border:1px solid var(--border)}
+.media-cta h2{font-family:'DM Serif Display',serif;font-size:1.7rem;letter-spacing:-0.01em;margin-bottom:0.7rem}
+.media-cta p{color:var(--muted);font-size:0.95rem;max-width:520px;margin:0 auto 1.6rem}
+.media-cta a{display:inline-block;font-size:0.85rem;font-weight:500;color:white;background:var(--accent);padding:0.85rem 2rem;border-radius:2px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.2s}
+.media-cta a:hover{background:var(--accent-h)}
+
+footer{background:var(--dark);padding:2.25rem 5vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-logo{font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,0.5)}
+.foot-logo span{color:#7dc9a0}
+footer nav{position:static;background:none;backdrop-filter:none;border:none;padding:0;height:auto;display:block}
+footer nav ul{list-style:none;display:flex;gap:1.5rem}
+footer nav ul a{font-size:0.75rem;color:rgba(255,255,255,0.25);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;text-transform:none}
+footer nav ul a:hover{color:rgba(255,255,255,0.5)}
+footer .copy{font-size:0.75rem;color:rgba(255,255,255,0.2)}
+
+@media(max-width:900px){
+  .nav-hamburger{display:flex}
+  nav ul{display:none}
+  .nav-cta{display:none}
+  .page-head{padding:7rem 5vw 3rem}
+  .page-head-inner{grid-template-columns:1fr}
+  .article-grid .article-card.featured{grid-template-columns:1fr}
+  .article-grid .article-card.featured .article-body{padding:1.8rem 1.7rem}
+  .article-grid .article-card.featured .article-title{font-size:1.4rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<div class="nav-overlay" id="nav-overlay">
+  <a href="index.html#warum" onclick="closeMenu()">Warum?</a>
+  <a href="index.html#leistungen" onclick="closeMenu()">Leistungen</a>
+  <a href="gefahrstoffe.html" onclick="closeMenu()">Gefahrstoffe</a>
+  <a href="mediathek.html" onclick="closeMenu()">Mediathek</a>
+  <a href="index.html#ueber" onclick="closeMenu()">Über mich</a>
+  <div class="nav-overlay-divider"></div>
+  <a href="index.html#kontakt" class="nav-overlay-cta" onclick="closeMenu()">Anfrage stellen</a>
+</div>
+
+<nav id="nav">
+  <a class="nav-logo" href="index.html">Kreith <span>·</span> Schadstoffgutachten</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="index.html#warum">Warum?</a></li>
+    <li><a href="index.html#leistungen">Leistungen</a></li>
+    <li><a href="gefahrstoffe.html">Gefahrstoffe</a></li>
+    <li><a href="mediathek.html" class="active">Mediathek</a></li>
+    <li><a href="index.html#ueber">Über mich</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html#kontakt">Anfrage stellen</a>
+</nav>
+
+<header class="page-head">
+  <div class="page-head-inner">
+    <div>
+      <div class="page-eye">Mediathek &amp; Blog</div>
+      <h1 class="page-title">Aktuelles aus<br>Gesetzgebung &amp; Praxis</h1>
+      <p class="page-sub">Kuratierte Beiträge aus Fachpresse und Recht – sowie eine automatisch aktualisierte Live-Übersicht aktueller Branchen-News.</p>
+    </div>
+    <div class="page-meta">Stand: Mai 2026</div>
+  </div>
+</header>
+
+<main>
+
+  <div class="filter-bar">
+    <button class="filter-chip active" data-filter="all">Alle Beiträge</button>
+    <button class="filter-chip" data-filter="recht">Recht &amp; Gesetz</button>
+    <button class="filter-chip" data-filter="asbest">Asbest</button>
+    <button class="filter-chip" data-filter="pcb">PCB</button>
+    <button class="filter-chip" data-filter="kmf">KMF</button>
+    <button class="filter-chip" data-filter="immo">Immobilien</button>
+  </div>
+
+  <div class="article-grid">
+
+    <a class="article-card featured" data-cat="recht" href="https://www.dbz.de/artikel/wie-2026-mit-asbest-umgehen-4353271.html" target="_blank" rel="noopener">
+      <div class="article-img cover-recht">
+        <div class="article-img-pattern"></div>
+        <span class="article-img-cat">Recht &amp; Gesetz</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span>Januar 2026</span><span class="article-meta-dot"></span><span>Deutsche BauZeitschrift</span></div>
+        <h2 class="article-title">Gefahrstoffverordnung 2026: Was Bauherren, Handwerk und Eigentümer jetzt wissen müssen</h2>
+        <p class="article-excerpt">Mit Wirkung zum 21. Dezember 2025 wurde die Gefahrstoffverordnung novelliert. Für Gebäude vor dem 31. Oktober 1993 gilt eine gesetzliche Asbestvermutung. Genehmigungspflichten für Sanierungsarbeiten werden erweitert.</p>
+        <span class="article-cta">Artikel lesen →</span>
+      </div>
+    </a>
+
+    <a class="article-card" data-cat="asbest" href="https://www.mittelstandsmagazin-nrw.de/asbest-in-altbauten-neue-vorschriften-2026-und-sanierungspflichten/" target="_blank" rel="noopener">
+      <div class="article-img cover-asbest">
+        <div class="article-img-bg cover-img-asbest"></div>
+        <span class="article-img-cat">Asbest</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span>Februar 2026</span><span class="article-meta-dot"></span><span>Mittelstandsmagazin NRW</span></div>
+        <h3 class="article-title">Asbest in Altbauten – neue Vorschriften und Sanierungspflichten 2026</h3>
+        <p class="article-excerpt">Generalverdacht für Bauten vor 1993, neue Genehmigungspflichten und verschärfte Schutzmaßnahmen. Was Eigentümer vor jeder Sanierung prüfen lassen müssen.</p>
+        <span class="article-cta">Quelle aufrufen →</span>
+      </div>
+    </a>
+
+    <a class="article-card" data-cat="recht" href="https://www.deutsche-handwerks-zeitung.de/asbest-neues-update-fuer-die-gefahrstoffverordnung-372975/" target="_blank" rel="noopener">
+      <div class="article-img cover-recht">
+        <div class="article-img-pattern"></div>
+        <span class="article-img-cat">Recht &amp; Gesetz</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span>2026</span><span class="article-meta-dot"></span><span>Deutsche Handwerks-Zeitung</span></div>
+        <h3 class="article-title">Asbest: Neues Update für die Gefahrstoffverordnung</h3>
+        <p class="article-excerpt">Genehmigungspflicht ab Dezember 2026 auch für niedrige und mittlere Risikobereiche. Fachkundenachweis und arbeitsmedizinische Vorsorge werden Pflicht.</p>
+        <span class="article-cta">Quelle aufrufen →</span>
+      </div>
+    </a>
+
+    <a class="article-card" data-cat="pcb" href="https://www.bauhandwerk.de/artikel/warum-pcb-30-jahre-nach-dem-verbot-immer-noch-gefaehrlich-sind-4120588.html" target="_blank" rel="noopener">
+      <div class="article-img cover-pcb">
+        <div class="article-img-pattern"></div>
+        <span class="article-img-cat">PCB</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span>2025</span><span class="article-meta-dot"></span><span>bauhandwerk</span></div>
+        <h3 class="article-title">Warum PCB 30 Jahre nach dem Verbot immer noch gefährlich sind</h3>
+        <p class="article-excerpt">Polychlorierte Biphenyle wurden bis 1989 in Fugendichtmassen, Anstrichen und Brandschutz verwendet. Bei Sanierungen in Gebäuden der Baujahre 1955–1985 nach wie vor ein erhebliches Gesundheitsrisiko.</p>
+        <span class="article-cta">Quelle aufrufen →</span>
+      </div>
+    </a>
+
+    <a class="article-card" data-cat="kmf" href="https://www.baubiologie-regional.de/news/wenn-alte-mineralwolle-riskante-fasern-freisetzt-935.html" target="_blank" rel="noopener">
+      <div class="article-img cover-kmf">
+        <div class="article-img-pattern"></div>
+        <span class="article-img-cat">KMF</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span>2025</span><span class="article-meta-dot"></span><span>Baubiologie-Regional</span></div>
+        <h3 class="article-title">Wenn alte Mineralwolle riskante Fasern freisetzt</h3>
+        <p class="article-excerpt">Mineralwolle vor Juni 2000 gilt als krebsverdächtig (Kategorie 2 nach TRGS 905). Was bei Rückbau und Sanierung in älteren Gebäuden zu beachten ist.</p>
+        <span class="article-cta">Quelle aufrufen →</span>
+      </div>
+    </a>
+
+    <a class="article-card" data-cat="recht" href="https://bauportal.bgbau.de/bauportal-12025/rund-um-die-bg-bau/novellierung-gefahrstoffverordnung-umgang-mit-asbest" target="_blank" rel="noopener">
+      <div class="article-img cover-recht">
+        <div class="article-img-pattern"></div>
+        <span class="article-img-cat">Recht &amp; Gesetz</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span>2025</span><span class="article-meta-dot"></span><span>BG BAU Bauportal</span></div>
+        <h3 class="article-title">Novellierung der Gefahrstoffverordnung – Umgang mit Asbest</h3>
+        <p class="article-excerpt">Erkundungspflicht für ausführende Unternehmen, Informationspflicht für Eigentümer – die wichtigsten Punkte der GefStoffV-Novelle vom 5.12.2024 verständlich erklärt.</p>
+        <span class="article-cta">Quelle aufrufen →</span>
+      </div>
+    </a>
+
+    <a class="article-card" data-cat="immo" href="https://www.vpb.de/beratung/modernisierung/schadstoffgutachten" target="_blank" rel="noopener">
+      <div class="article-img cover-immo">
+        <div class="article-img-pattern"></div>
+        <span class="article-img-cat">Immobilien</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span>2025</span><span class="article-meta-dot"></span><span>Verband Privater Bauherren</span></div>
+        <h3 class="article-title">Schadstoffgutachten: Sicherheit für Ihre Immobilie</h3>
+        <p class="article-excerpt">Warum Käufer und Eigentümer vor Sanierung, Verkauf oder Finanzierung in ein unabhängiges Gutachten investieren sollten – Kosten, Ablauf und rechtliche Einordnung.</p>
+        <span class="article-cta">Quelle aufrufen →</span>
+      </div>
+    </a>
+
+    <a class="article-card" data-cat="asbest" href="https://www.baua.de/DE/Angebote/Regelwerk/TRGS/TRGS-519" target="_blank" rel="noopener">
+      <div class="article-img cover-asbest">
+        <div class="article-img-bg cover-img-asbest"></div>
+        <span class="article-img-cat">Asbest</span>
+      </div>
+      <div class="article-body">
+        <div class="article-meta"><span>BAuA</span><span class="article-meta-dot"></span><span>Regelwerk</span></div>
+        <h3 class="article-title">TRGS 519 – Technische Regel im Original</h3>
+        <p class="article-excerpt">Die maßgebliche Technische Regel für Gefahrstoffe regelt Abbruch-, Sanierungs- und Instandhaltungsarbeiten mit Asbest. Pflichtlektüre für Eigentümer und Bauträger – hier zum Download bei der BAuA.</p>
+        <span class="article-cta">Zum Regelwerk →</span>
+      </div>
+    </a>
+
+  </div>
+
+  <!-- Live-News-Strip -->
+  <section class="live-news">
+    <div class="live-news-head">
+      <h2>Live aus der Branche</h2>
+      <span class="live-tag"><span class="live-dot"></span>Auto-Update via Google News</span>
+    </div>
+    <div id="live-news-grid" class="live-news-grid">
+      <div class="live-news-loading">Aktuelle Beiträge werden geladen …</div>
+    </div>
+    <div class="live-news-footer">Quelle: Google News · automatisch aktualisiert · zuletzt: <span id="live-news-updated">–</span></div>
+  </section>
+
+  <section class="media-cta">
+    <h2>Konkrete Frage zu Ihrem Objekt?</h2>
+    <p>Die Rechtslage ändert sich schnell – ein individuelles Gespräch klärt in wenigen Minuten, ob und wann ein Gutachten für Ihr Objekt sinnvoll ist.</p>
+    <a href="index.html#kontakt">Unverbindlich anfragen</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-logo">Kreith <span>·</span> Schadstoffgutachten</div>
+  <nav><ul>
+    <li><a href="index.html#leistungen">Leistungen</a></li>
+    <li><a href="gefahrstoffe.html">Gefahrstoffe</a></li>
+    <li><a href="mediathek.html">Mediathek</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="datenschutz.html">Datenschutz</a></li>
+  </ul></nav>
+  <span class="copy">© 2026 Alexander Kreith · Schadstoffgutachten</span>
+</footer>
+
+<script>
+(function(){
+  var bar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', function(){
+    var h = document.body.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h * 100) : 0) + '%';
+  }, {passive:true});
+})();
+
+var hamburger = document.getElementById('nav-hamburger');
+var overlay   = document.getElementById('nav-overlay');
+function closeMenu(){
+  hamburger.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+if(hamburger){
+  hamburger.addEventListener('click', function(){
+    var opening = !overlay.classList.contains('open');
+    hamburger.classList.toggle('open', opening);
+    overlay.classList.toggle('open', opening);
+    document.body.style.overflow = opening ? 'hidden' : '';
+  });
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+
+// Filter
+(function(){
+  var chips = document.querySelectorAll('.filter-chip');
+  var cards = document.querySelectorAll('.article-card');
+  chips.forEach(function(c){
+    c.addEventListener('click', function(){
+      chips.forEach(function(x){ x.classList.remove('active'); });
+      c.classList.add('active');
+      var f = c.dataset.filter;
+      cards.forEach(function(card){
+        card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+      });
+    });
+  });
+})();
+
+// Live-News via Google News RSS (CORS-Proxy: allorigins.win)
+(function(){
+  var FEED = 'https://news.google.com/rss/search?q=Asbest+OR+Schadstoffgutachten+OR+Gefahrstoffverordnung+site:de&hl=de&gl=DE&ceid=DE:de';
+  var PROXY = 'https://api.allorigins.win/raw?url=';
+  var grid = document.getElementById('live-news-grid');
+  var updated = document.getElementById('live-news-updated');
+  if(!grid) return;
+  fetch(PROXY + encodeURIComponent(FEED))
+    .then(function(r){ return r.text(); })
+    .then(function(xml){
+      var doc = new DOMParser().parseFromString(xml, 'application/xml');
+      var items = Array.from(doc.querySelectorAll('item')).slice(0, 6);
+      if(items.length === 0) throw new Error('Keine Beiträge');
+      grid.innerHTML = items.map(function(it){
+        var title = (it.querySelector('title')||{}).textContent || '';
+        var link  = (it.querySelector('link') ||{}).textContent || '#';
+        var pub   = (it.querySelector('pubDate')||{}).textContent || '';
+        var src   = (it.querySelector('source')||{}).textContent || 'Google News';
+        var date  = pub ? new Date(pub).toLocaleDateString('de-DE',{day:'2-digit',month:'short',year:'numeric'}) : '';
+        return '<a class="live-news-item" href="'+link+'" target="_blank" rel="noopener">'
+             +   '<div class="live-news-source">'+src+'</div>'
+             +   '<h4>'+title.replace(/ - [^-]+$/,'')+'</h4>'
+             +   '<div class="live-news-date">'+date+'</div>'
+             + '</a>';
+      }).join('');
+      updated.textContent = new Date().toLocaleString('de-DE',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});
+    })
+    .catch(function(err){
+      console.warn('Live-News laden fehlgeschlagen:', err);
+      grid.innerHTML = '<div class="live-news-error">Aktuelle Beiträge konnten momentan nicht geladen werden. Die kuratierte Auswahl oben ist weiterhin verfügbar.</div>';
+    });
+})();
+</script>
+</body>
+</html>

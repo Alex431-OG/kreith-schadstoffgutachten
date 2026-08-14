@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gefahrstoffe in Gebäuden – Asbest, PCB, KMF & mehr | Alexander Kreith</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preload" href="fonts/dm-sans-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/dm-serif-display-400.woff2" as="font" type="font/woff2" crossorigin>
+<meta name="description" content="Übersicht der wichtigsten Gefahrstoffe in Gebäuden: Asbest, PCB, KMF, PAK, PCP, Schimmel. Mit Erklärungen, Vorkommen, Gefahren und Rechtsgrundlagen.">
+<link rel="canonical" href="https://kreith-schadstoffgutachten.de/gefahrstoffe.html">
+<style>
+@font-face{font-family:'DM Sans';font-style:normal;font-weight:300 600;font-display:swap;src:url('fonts/dm-sans-var.woff2') format('woff2')}
+@font-face{font-family:'DM Serif Display';font-style:normal;font-weight:400;font-display:swap;src:url('fonts/dm-serif-display-400.woff2') format('woff2')}
+@font-face{font-family:'DM Serif Display';font-style:italic;font-weight:400;font-display:swap;src:url('fonts/dm-serif-display-400-italic.woff2') format('woff2')}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --cream:#F5F2EC;--dark:#1A1A18;--mid:#3D3D38;--muted:#8A8980;
+  --accent:#2E5C3F;--accent-h:#234a31;--accent-l:#E8F0EB;
+  --border:#D8D5CE;--white:#FFFFFF;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{font-family:'DM Sans',sans-serif;background:var(--white);color:var(--dark);font-size:16px;line-height:1.7;overflow-x:hidden}
+
+#scroll-progress{position:fixed;top:0;left:0;height:2px;background:linear-gradient(90deg,var(--accent),#7dc9a0);z-index:500;width:0%;transition:width 0.08s linear;pointer-events:none}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:200;padding:0 5vw;display:flex;align-items:center;justify-content:space-between;height:72px;background:rgba(255,255,255,0.92);backdrop-filter:blur(20px) saturate(1.8);-webkit-backdrop-filter:blur(20px) saturate(1.8);border-bottom:1px solid var(--border)}
+.nav-logo{font-family:'DM Serif Display',serif;font-size:1.1rem;color:var(--dark);text-decoration:none}
+.nav-logo span{color:var(--accent)}
+nav ul{list-style:none;display:flex;gap:2rem}
+nav ul a{font-size:0.8rem;font-weight:400;color:var(--mid);text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:color 0.2s}
+nav ul a:hover,nav ul a.active{color:var(--accent)}
+.nav-cta{font-size:0.8rem;font-weight:500;color:white!important;background:var(--accent);padding:0.55rem 1.2rem;border-radius:2px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:background 0.2s;cursor:pointer}
+.nav-cta:hover{background:var(--accent-h)}
+
+.nav-hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none;outline:none;z-index:210}
+.nav-hamburger span{display:block;width:22px;height:1.5px;background:var(--dark);border-radius:2px;transition:transform 0.35s cubic-bezier(.23,1,.32,1),opacity 0.25s}
+.nav-hamburger.open span:nth-child(1){transform:translateY(6.5px) rotate(45deg)}
+.nav-hamburger.open span:nth-child(2){opacity:0;transform:scaleX(0)}
+.nav-hamburger.open span:nth-child(3){transform:translateY(-6.5px) rotate(-45deg)}
+.nav-overlay{display:none;position:fixed;inset:0;background:rgba(10,18,12,0.97);backdrop-filter:blur(20px);z-index:205;flex-direction:column;align-items:center;justify-content:center;opacity:0;transition:opacity 0.35s ease}
+.nav-overlay.open{display:flex;animation:overlayIn 0.35s ease forwards}
+@keyframes overlayIn{from{opacity:0;transform:scale(0.98)}to{opacity:1;transform:scale(1)}}
+.nav-overlay a{font-family:'DM Serif Display',serif;font-size:clamp(1.8rem,6vw,3rem);color:rgba(255,255,255,0.45);text-decoration:none;padding:0.6rem 2rem;letter-spacing:-0.02em;transition:color 0.2s,transform 0.2s;display:block}
+.nav-overlay a:hover{color:white;transform:translateX(6px)}
+.nav-overlay .nav-overlay-cta{margin-top:2rem;font-family:'DM Sans',sans-serif;font-size:0.85rem;font-weight:500;color:white;background:var(--accent);padding:0.9rem 2.5rem;border-radius:2px;letter-spacing:0.06em;text-transform:uppercase}
+.nav-overlay-divider{width:40px;height:1px;background:rgba(255,255,255,0.1);margin:1.5rem auto}
+
+.page-head{padding:9rem 5vw 4rem;background:var(--cream);border-bottom:1px solid var(--border)}
+.page-head-inner{max-width:1100px;margin:0 auto}
+.page-eye{font-size:0.7rem;font-weight:500;letter-spacing:0.14em;text-transform:uppercase;color:var(--accent);margin-bottom:0.9rem}
+.page-title{font-family:'DM Serif Display',serif;font-size:clamp(2.6rem,5vw,4rem);line-height:1.05;letter-spacing:-0.02em;color:var(--dark);margin-bottom:1rem}
+.page-sub{font-size:1rem;color:var(--muted);font-weight:300;max-width:640px;line-height:1.8}
+
+.sub-index{padding:3rem 5vw 0;max-width:1100px;margin:0 auto}
+.sub-index-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:0.6rem;padding:1.2rem;background:var(--cream);border-radius:6px;border:1px solid var(--border)}
+.sub-index-grid a{font-size:0.82rem;font-weight:500;color:var(--mid);text-decoration:none;padding:0.55rem 0.9rem;border-radius:3px;transition:background 0.2s,color 0.2s;display:block;text-align:center;letter-spacing:0.02em}
+.sub-index-grid a:hover{background:var(--accent);color:white}
+
+main{padding:4rem 5vw 6rem;max-width:1100px;margin:0 auto}
+
+.substance{padding:4rem 0;border-top:1px solid var(--border);display:grid;grid-template-columns:280px 1fr;gap:4rem;align-items:start}
+.substance:first-child{border-top:none;padding-top:0}
+.sub-sidebar{position:sticky;top:6rem}
+.sub-marker{font-family:'DM Serif Display',serif;font-size:3.5rem;line-height:1;color:var(--accent);letter-spacing:-0.03em;margin-bottom:0.4rem}
+.sub-name{font-family:'DM Serif Display',serif;font-size:1.6rem;letter-spacing:-0.01em;color:var(--dark);line-height:1.1;margin-bottom:0.7rem}
+.sub-tag{display:inline-block;font-size:0.68rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);background:var(--accent-l);padding:0.3rem 0.7rem;border-radius:2px}
+.sub-content h3{font-family:'DM Sans',sans-serif;font-size:0.78rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--accent);margin-bottom:0.6rem;margin-top:1.6rem}
+.sub-content h3:first-child{margin-top:0}
+.sub-content p{font-size:0.97rem;color:var(--mid);line-height:1.8;margin-bottom:0.7rem}
+.sub-content strong{color:var(--dark);font-weight:500}
+.sub-content ul{list-style:none;padding:0;margin:0.5rem 0 0.9rem}
+.sub-content ul li{position:relative;padding-left:1.1rem;font-size:0.95rem;color:var(--mid);margin-bottom:0.35rem;line-height:1.7}
+.sub-content ul li::before{content:'';position:absolute;left:0;top:0.65rem;width:5px;height:5px;background:var(--accent);border-radius:50%}
+.sub-content a{color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(46,92,63,0.25);transition:border-color 0.2s}
+.sub-content a:hover{border-bottom-color:var(--accent)}
+
+.sub-facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1.2rem;padding:1.4rem;background:var(--cream);border-radius:6px;margin:1.5rem 0;border:1px solid var(--border)}
+.sub-fact-label{font-size:0.68rem;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);margin-bottom:0.25rem}
+.sub-fact-value{font-weight:500;color:var(--dark);line-height:1.4;font-size:0.85rem}
+
+.sub-sources{margin-top:1.5rem;padding-top:1.2rem;border-top:1px dashed var(--border)}
+.sub-sources-title{font-size:0.7rem;font-weight:500;letter-spacing:0.1em;text-transform:uppercase;color:var(--muted);margin-bottom:0.6rem}
+.sub-sources a{display:block;font-size:0.85rem;padding:0.25rem 0;border:none}
+
+.media-cta{margin-top:5rem;padding:3rem 2.5rem;background:var(--accent);border-radius:6px;text-align:center;color:white}
+.media-cta h2{font-family:'DM Serif Display',serif;font-size:1.7rem;letter-spacing:-0.01em;margin-bottom:0.7rem;color:white}
+.media-cta p{color:rgba(255,255,255,0.85);font-size:0.95rem;max-width:560px;margin:0 auto 1.6rem}
+.media-cta a{display:inline-block;font-size:0.85rem;font-weight:500;color:var(--accent);background:white;padding:0.85rem 2rem;border-radius:2px;text-decoration:none;letter-spacing:0.05em;text-transform:uppercase;transition:opacity 0.2s}
+.media-cta a:hover{opacity:0.88}
+
+footer{background:var(--dark);padding:2.25rem 5vw;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem}
+.foot-logo{font-family:'DM Serif Display',serif;font-size:1rem;color:rgba(255,255,255,0.5)}
+.foot-logo span{color:#7dc9a0}
+footer nav{position:static;background:none;backdrop-filter:none;border:none;padding:0;height:auto;display:block}
+footer nav ul{list-style:none;display:flex;gap:1.5rem}
+footer nav ul a{font-size:0.75rem;color:rgba(255,255,255,0.25);text-decoration:none;letter-spacing:0.04em;transition:color 0.2s;text-transform:none}
+footer nav ul a:hover{color:rgba(255,255,255,0.5)}
+footer .copy{font-size:0.75rem;color:rgba(255,255,255,0.2)}
+
+@media(max-width:900px){
+  .nav-hamburger{display:flex}
+  nav ul{display:none}
+  .nav-cta{display:none}
+  .page-head{padding:7rem 5vw 3rem}
+  .substance{grid-template-columns:1fr;gap:1.5rem;padding:3rem 0}
+  .sub-sidebar{position:static}
+  .sub-marker{font-size:2.8rem}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:0.01ms!important;transition-duration:0.01ms!important}}
+</style>
+</head>
+<body>
+
+<div id="scroll-progress"></div>
+
+<div class="nav-overlay" id="nav-overlay">
+  <a href="index.html#warum" onclick="closeMenu()">Warum?</a>
+  <a href="index.html#leistungen" onclick="closeMenu()">Leistungen</a>
+  <a href="gefahrstoffe.html" onclick="closeMenu()">Gefahrstoffe</a>
+  <a href="mediathek.html" onclick="closeMenu()">Mediathek</a>
+  <a href="index.html#ueber" onclick="closeMenu()">Über mich</a>
+  <div class="nav-overlay-divider"></div>
+  <a href="index.html#kontakt" class="nav-overlay-cta" onclick="closeMenu()">Anfrage stellen</a>
+</div>
+
+<nav id="nav">
+  <a class="nav-logo" href="index.html">Kreith <span>·</span> Schadstoffgutachten</a>
+  <button class="nav-hamburger" id="nav-hamburger" aria-label="Menü öffnen">
+    <span></span><span></span><span></span>
+  </button>
+  <ul>
+    <li><a href="index.html#warum">Warum?</a></li>
+    <li><a href="index.html#leistungen">Leistungen</a></li>
+    <li><a href="gefahrstoffe.html" class="active">Gefahrstoffe</a></li>
+    <li><a href="mediathek.html">Mediathek</a></li>
+    <li><a href="index.html#ueber">Über mich</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html#kontakt">Anfrage stellen</a>
+</nav>
+
+<header class="page-head">
+  <div class="page-head-inner">
+    <div class="page-eye">Wissen</div>
+    <h1 class="page-title">Gefahrstoffe<br>in Gebäuden</h1>
+    <p class="page-sub">Die wichtigsten Schadstoffe in Bestandsimmobilien – mit Vorkommen, Gesundheitsrisiko, Rechtsgrundlage und weiterführenden Quellen. Diese Übersicht ersetzt kein Gutachten, gibt aber Orientierung, wann eines erforderlich ist.</p>
+  </div>
+</header>
+
+<div class="sub-index">
+  <div class="sub-index-grid">
+    <a href="#asbest">Asbest</a>
+    <a href="#kmf">KMF / Mineralfaser</a>
+    <a href="#pcb">PCB</a>
+    <a href="#pak">PAK</a>
+    <a href="#pcp">PCP / Lindan</a>
+    <a href="#schimmel">Schimmel</a>
+  </div>
+</div>
+
+<main>
+
+  <article class="substance" id="asbest">
+    <div class="sub-sidebar">
+      <div class="sub-marker">01</div>
+      <div class="sub-name">Asbest</div>
+      <span class="sub-tag">Krebserzeugend Kat. 1A</span>
+    </div>
+    <div class="sub-content">
+      <div class="sub-facts">
+        <div><div class="sub-fact-label">Verbot in Deutschland</div><div class="sub-fact-value">31. Oktober 1993</div></div>
+        <div><div class="sub-fact-label">Generalverdacht</div><div class="sub-fact-value">Baujahr vor 1993</div></div>
+        <div><div class="sub-fact-label">Regelwerk</div><div class="sub-fact-value">TRGS 519</div></div>
+        <div><div class="sub-fact-label">Latenzzeit</div><div class="sub-fact-value">20–40 Jahre</div></div>
+      </div>
+      <h3>Was ist Asbest?</h3>
+      <p>Asbest ist ein natürlich vorkommendes, faserförmiges Mineral, das wegen seiner Hitzebeständigkeit, mechanischen Stabilität und Isolierwirkung jahrzehntelang in über 3.000 Produkten eingesetzt wurde. Beim Einatmen gelangen die mikroskopisch feinen Fasern tief in die Lunge, wo sie nicht abgebaut werden und nach langer Latenzzeit Asbestose, Lungenkrebs oder Mesotheliome verursachen können.</p>
+      <h3>Wo kommt Asbest in Gebäuden vor?</h3>
+      <ul>
+        <li>Faserzement-Dachplatten und Fassadenelemente (Eternit)</li>
+        <li>Bodenbeläge (Floor-Flex-Platten, Cushion-Vinyl, Kleber)</li>
+        <li>Spachtelmassen, Brandschutzbeschichtungen, Putze</li>
+        <li>Nachtspeicheröfen, Heizungsabdichtungen, Rohrisolierungen</li>
+        <li>Dichtschnüre an Türen und Öfen</li>
+      </ul>
+      <h3>Rechtslage</h3>
+      <p>Mit der Novelle der Gefahrstoffverordnung (in Kraft seit 21.12.2025) gilt für alle Gebäude mit Baujahr vor dem 31. Oktober 1993 eine <strong>gesetzliche Asbestvermutung</strong>. Bauausführende Unternehmen sind erkundungspflichtig, Eigentümer haben eine Informationspflicht zur Bau- und Nutzungsgeschichte.</p>
+      <div class="sub-sources">
+        <div class="sub-sources-title">Quellen &amp; Vertiefung</div>
+        <a href="https://www.baua.de/DE/Angebote/Regelwerk/TRGS/TRGS-519" target="_blank" rel="noopener">→ TRGS 519 (BAuA)</a>
+        <a href="https://www.bgbau.de/fileadmin/Medien-Objekte/Medien/Broschuere_Flyer/Leitfaden_Asbest_Bauen_im_Bestand.pdf" target="_blank" rel="noopener">→ Leitfaden „Asbest beim Bauen im Bestand" (BG BAU)</a>
+        <a href="https://www.dbz.de/artikel/wie-2026-mit-asbest-umgehen-4353271.html" target="_blank" rel="noopener">→ Deutsche BauZeitschrift: Wie 2026 mit Asbest umgehen?</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="substance" id="kmf">
+    <div class="sub-sidebar">
+      <div class="sub-marker">02</div>
+      <div class="sub-name">Künstliche Mineralfaser (KMF)</div>
+      <span class="sub-tag">Alte Wolle: krebsverdächtig</span>
+    </div>
+    <div class="sub-content">
+      <div class="sub-facts">
+        <div><div class="sub-fact-label">Kritisches Material</div><div class="sub-fact-value">vor Juni 2000</div></div>
+        <div><div class="sub-fact-label">Regelwerk</div><div class="sub-fact-value">TRGS 521 / 905</div></div>
+        <div><div class="sub-fact-label">Faserdurchmesser</div><div class="sub-fact-value">unter 3 µm</div></div>
+        <div><div class="sub-fact-label">Entsorgung</div><div class="sub-fact-value">Deponieklasse I+</div></div>
+      </div>
+      <h3>Was ist KMF?</h3>
+      <p>Künstliche Mineralfasern (Glas-, Stein- und Schlackenwolle) wurden seit den 1960er Jahren als Dämmstoff eingesetzt. Alte Mineralwolle vor Juni 2000 erfüllt die Bio-Löslichkeits-Kriterien nicht und ist in Kategorie 2 (krebsverdächtig) eingestuft. Beim Rückbau freigesetzte Fasern können Atemwege, Haut und Augen reizen und gelten als potenziell krebserzeugend.</p>
+      <h3>Wo kommt KMF vor?</h3>
+      <ul>
+        <li>Dachdämmung, Geschossdecken, Trockenbauwände</li>
+        <li>Hinterlüftete Fassaden, Außenwanddämmung</li>
+        <li>Rohrleitungs- und Kesseldämmungen</li>
+        <li>Schallschutz in Zwischenwänden und Geschossdecken</li>
+      </ul>
+      <h3>Rechtslage</h3>
+      <p>Seit dem 01.06.2000 dürfen krebserzeugende Mineralfasern in Deutschland nicht mehr in Verkehr gebracht werden. Vor diesem Datum verbaute KMF gilt als gefährlicher Abfall und ist nach TRGS 521 zu sanieren.</p>
+      <div class="sub-sources">
+        <div class="sub-sources-title">Quellen &amp; Vertiefung</div>
+        <a href="https://www.abfallratgeber.bayern.de/haushalte/abfallentsorgung/kuenstliche_mineralfasern/index.htm" target="_blank" rel="noopener">→ KMF-Entsorgung (Bayerisches Staatsministerium)</a>
+        <a href="https://www.innenraumluft.nrw.de/4_schadstoffe/kuenstlicheMineralfaserProdukte.php" target="_blank" rel="noopener">→ Fachportal Innenraumluft NRW</a>
+        <a href="https://www.baubiologie-regional.de/news/wenn-alte-mineralwolle-riskante-fasern-freisetzt-935.html" target="_blank" rel="noopener">→ Wenn alte Mineralwolle riskante Fasern freisetzt</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="substance" id="pcb">
+    <div class="sub-sidebar">
+      <div class="sub-marker">03</div>
+      <div class="sub-name">PCB</div>
+      <span class="sub-tag">Persistent, kanzerogen</span>
+    </div>
+    <div class="sub-content">
+      <div class="sub-facts">
+        <div><div class="sub-fact-label">Verbot in Deutschland</div><div class="sub-fact-value">1989</div></div>
+        <div><div class="sub-fact-label">Risiko-Baujahre</div><div class="sub-fact-value">1955–1985</div></div>
+        <div><div class="sub-fact-label">Sanierungs­schwelle</div><div class="sub-fact-value">3.000 ng/m³</div></div>
+        <div><div class="sub-fact-label">Regelwerk</div><div class="sub-fact-value">PCB-Richtlinie '93</div></div>
+      </div>
+      <h3>Was sind PCB?</h3>
+      <p>Polychlorierte Biphenyle (PCB) sind eine Gruppe von Industriechemikalien, die wegen ihrer thermischen Stabilität und elektrischen Isolierung in Weichmachern, Brandschutz, Fugendichtmassen und Transformatorölen eingesetzt wurden.</p>
+      <h3>Wo kommen PCB in Gebäuden vor?</h3>
+      <ul>
+        <li>Dauerelastische Fugendichtmassen (Fenster, Fassaden, Sanitärbereich)</li>
+        <li>Anstriche und Beschichtungen in Sporthallen und Schulen</li>
+        <li>Brandschutz-Spritzbeschichtungen</li>
+        <li>Kondensatoren und Transformatoren</li>
+      </ul>
+      <h3>Rechtslage</h3>
+      <p>Die <strong>PCB-Richtlinie</strong> von 1994 regelt Bewertung und Sanierung PCB-belasteter Baustoffe. Ab einer Raumluftkonzentration von 3.000 ng/m³ ist eine Sanierung nach TRGS 900 zwingend.</p>
+      <div class="sub-sources">
+        <div class="sub-sources-title">Quellen &amp; Vertiefung</div>
+        <a href="https://gewerbeaufsicht.baden-wuerttemberg.de/documents/20121/49165/6_1.pdf" target="_blank" rel="noopener">→ PCB-Richtlinie (Original-PDF)</a>
+        <a href="https://www.bauhandwerk.de/artikel/warum-pcb-30-jahre-nach-dem-verbot-immer-noch-gefaehrlich-sind-4120588.html" target="_blank" rel="noopener">→ bauhandwerk: 30 Jahre nach dem PCB-Verbot</a>
+        <a href="https://sifa-flex.de/arbeitsschutz/pcb-in-gebaeuden-und-umwelt/" target="_blank" rel="noopener">→ PCB-Übersicht: Gefahren, Grenzwerte, Sanierung</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="substance" id="pak">
+    <div class="sub-sidebar">
+      <div class="sub-marker">04</div>
+      <div class="sub-name">PAK</div>
+      <span class="sub-tag">Krebserzeugend</span>
+    </div>
+    <div class="sub-content">
+      <div class="sub-facts">
+        <div><div class="sub-fact-label">Risiko-Baujahre</div><div class="sub-fact-value">vor 1970</div></div>
+        <div><div class="sub-fact-label">Hauptquelle</div><div class="sub-fact-value">Teerprodukte</div></div>
+        <div><div class="sub-fact-label">Leitsubstanz</div><div class="sub-fact-value">Benzo[a]pyren</div></div>
+        <div><div class="sub-fact-label">Regelwerk</div><div class="sub-fact-value">DGUV 101-004</div></div>
+      </div>
+      <h3>Was sind PAK?</h3>
+      <p>Polyzyklische Aromatische Kohlenwasserstoffe (PAK) entstehen bei der unvollständigen Verbrennung organischer Stoffe und finden sich in Teer, Bitumen und Pech.</p>
+      <h3>Wo kommen PAK in Gebäuden vor?</h3>
+      <ul>
+        <li>Teer-Parkettkleber unter alten Holzböden</li>
+        <li>Bitumen-Dachpappen, Anstriche</li>
+        <li>Korkparkett-Verlegung mit teerhaltigen Klebern</li>
+        <li>Holzschutzmittel (Carbolineum)</li>
+      </ul>
+      <div class="sub-sources">
+        <div class="sub-sources-title">Quellen &amp; Vertiefung</div>
+        <a href="https://bauportal.bgbau.de/bauportal-42023/thema/sanierung-und-bauwerksunterhalt/gebaeudeschadstoffe-beim-bauen-im-bestand" target="_blank" rel="noopener">→ Gebäudeschadstoffe beim Bauen im Bestand (BG BAU)</a>
+        <a href="https://www.schadstoff-kompass.de/sanierung/" target="_blank" rel="noopener">→ Schadstoff-Kompass: Sanierung Asbest, KMF, PAK, PCB, PCP</a>
+      </div>
+    </div>
+  </article>
+
+  <article class="substance" id="pcp">
+    <div class="sub-sidebar">
+      <div class="sub-marker">05</div>
+      <div class="sub-name">PCP &amp; Lindan</div>
+      <span class="sub-tag">Holzschutz-Klassiker</span>
+    </div>
+    <div class="sub-content">
+      <div class="sub-facts">
+        <div><div class="sub-fact-label">Verbot PCP</div><div class="sub-fact-value">1989</div></div>
+        <div><div class="sub-fact-label">Verbot Lindan</div><div class="sub-fact-value">2007 (EU)</div></div>
+        <div><div class="sub-fact-label">Hauptbelastung</div><div class="sub-fact-value">Dachstühle 60–80er</div></div>
+        <div><div class="sub-fact-label">Regelwerk</div><div class="sub-fact-value">PCP-Richtlinie</div></div>
+      </div>
+      <h3>Was sind PCP und Lindan?</h3>
+      <p>Pentachlorphenol (PCP) und Lindan (γ-HCH) waren in Holzschutzmitteln wie Xyladecor und Xylamon enthalten und wurden vor allem in Dachstühlen, Holzverkleidungen und Möbeln eingesetzt.</p>
+      <h3>Wo kommen sie vor?</h3>
+      <ul>
+        <li>Dachstuhl-Balken in Bauten der 60er bis 80er Jahre</li>
+        <li>Holzvertäfelungen, Sichtdachstühle</li>
+        <li>Möbel und Einbauschränke mit Behandlung</li>
+      </ul>
+    </div>
+  </article>
+
+  <article class="substance" id="schimmel">
+    <div class="sub-sidebar">
+      <div class="sub-marker">06</div>
+      <div class="sub-name">Schimmel</div>
+      <span class="sub-tag">Biogen, allergen</span>
+    </div>
+    <div class="sub-content">
+      <div class="sub-facts">
+        <div><div class="sub-fact-label">Häufige Ursache</div><div class="sub-fact-value">Feuchte/Wärmebrücken</div></div>
+        <div><div class="sub-fact-label">Ab Schimmelfläche</div><div class="sub-fact-value">&gt; 0,5 m² → Fachbetrieb</div></div>
+        <div><div class="sub-fact-label">Leitfaden</div><div class="sub-fact-value">UBA-Schimmelleitfaden</div></div>
+        <div><div class="sub-fact-label">Auswirkung</div><div class="sub-fact-value">Atemwege, Allergien</div></div>
+      </div>
+      <h3>Was bedeutet Schimmelbefall?</h3>
+      <p>Schimmelpilze sind ein biogener Schadstoff und entstehen, wenn Feuchtigkeit auf organisches Material trifft. Sie geben Sporen und Mykotoxine an die Raumluft ab und können Atemwegserkrankungen und allergische Reaktionen auslösen.</p>
+      <h3>Typische Ursachen</h3>
+      <ul>
+        <li>Wärmebrücken in Außenecken, hinter Möbeln</li>
+        <li>Wasserschäden und unzureichende Bautrocknung</li>
+        <li>Falsches Lüftungsverhalten</li>
+        <li>Aufsteigende Feuchte aus dem Mauerwerk</li>
+      </ul>
+    </div>
+  </article>
+
+  <section class="media-cta">
+    <h2>Konkreter Verdacht in Ihrem Objekt?</h2>
+    <p>Ob Asbest, PCB, KMF oder Schimmel: Eine kurze Vorab-Einschätzung ist kostenlos. Senden Sie mir Baujahr, Lage und einen Hinweis auf den Verdachtsbereich – ich melde mich mit einem klaren Vorgehensvorschlag.</p>
+    <a href="index.html#kontakt">Verdacht prüfen lassen</a>
+  </section>
+
+</main>
+
+<footer>
+  <div class="foot-logo">Kreith <span>·</span> Schadstoffgutachten</div>
+  <nav><ul>
+    <li><a href="index.html#leistungen">Leistungen</a></li>
+    <li><a href="gefahrstoffe.html">Gefahrstoffe</a></li>
+    <li><a href="mediathek.html">Mediathek</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+    <li><a href="impressum.html">Impressum</a></li>
+    <li><a href="datenschutz.html">Datenschutz</a></li>
+  </ul></nav>
+  <span class="copy">© 2026 Alexander Kreith · Schadstoffgutachten</span>
+</footer>
+
+<script>
+(function(){
+  var bar = document.getElementById('scroll-progress');
+  window.addEventListener('scroll', function(){
+    var h = document.body.scrollHeight - window.innerHeight;
+    bar.style.width = (h > 0 ? (window.scrollY / h * 100) : 0) + '%';
+  }, {passive:true});
+})();
+
+var hamburger = document.getElementById('nav-hamburger');
+var overlay   = document.getElementById('nav-overlay');
+function closeMenu(){
+  hamburger.classList.remove('open');
+  overlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+if(hamburger){
+  hamburger.addEventListener('click', function(){
+    var opening = !overlay.classList.contains('open');
+    hamburger.classList.toggle('open', opening);
+    overlay.classList.toggle('open', opening);
+    document.body.style.overflow = opening ? 'hidden' : '';
+  });
+}
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeMenu(); });
+</script>
+</body>
+</html>
